@@ -37,39 +37,39 @@
     ======================================================== -->
     <style>
 
-        .headerbg {
-            background-color: #BDB76B;
-        }
+                .headerbg {
+                    background-color: burlywood;
+                }
 
-        .output {
-            background-color: black;
-            border: solid;
-            border-radius: 2rem;
-            color: white;
-            text-align: center;
-            line-height: 2rem;
-        }
+                .output {
+                    background-color: black;
+                    border: solid;
+                    border-radius: 2rem;
+                    color: white;
+                    text-align: center;
+                    line-height: 2rem;
+                }
 
-        .border {
-            border: medium;
-            border-radius: 2rem;
-            border-color: black;
-        }
+                .border {
+                    border: medium;
+                    border-radius: 2rem;
+                    border-color: black;
+                }
 
-        .formula {
-            text-align: center;
-            border: solid;
-            border-color: black;
-            border-radius: 2rem;
-        }
-
-        .tainermid {
-            padding-top: 25rem;
-        }
-
-        .container {
-            text-align: center;
-        }
+                .formula {
+                    text-align: center;
+                    border: solid;
+                    border-color: black;
+                    border-radius: 2rem;
+                }
+                /*
+                .tainermid {
+                    padding-top: 25rem;
+                }
+        */
+                .container {
+                    text-align: center;
+                }
     </style>
 
 </head>
@@ -84,7 +84,7 @@
 
         <nav class="nav-menu">
             <ul>
-                <li class="active">
+                <!--<li class="active">
                     <a href="#hero">
                         <img src="Images/icons8-taco-24.png" /><span>TacocaT</span>
                     </a>
@@ -103,12 +103,12 @@
                     <a href="#resume">
                         <img src="Images/icons8-ghost-24.png" /> <span>Sum of All Fears</span>
                     </a>
-                </li>
-                <li>
-                    <a href="https://charlieslanding.netlify.app/#challenges">
-                        <img src="Images/icons8-home-24.png" /><span>Back to Charlie Tincher's Portfolio</span>
-                    </a>
-                </li>
+                </li>-->
+            <li>
+                <a href="https://charlieslanding.netlify.app/#challenges">
+                    <img src="Images/icons8-home-24.png" /><span>Back to my Portfolio</span>
+                </a>
+            </li>
             </ul>
         </nav>
         <!-- end .nav-menu -->
@@ -128,34 +128,33 @@
 
     </header><!-- End Header -->
     <!-- ======= Hero Section ======= -->
-    <section id="hero" class="justify-content-center">
+    <section id="hero">
         <div class="container">
             <h1>TacocaT</h1>
             <p> <span class="typed">A palindrome challenge.</span></p>
-            <p>A palindrome is a word or phrase that is spelled the same way frontwards as it is spelled backwards.  You can type into the box, click flip, and we will let you know if that is a palindrome or not.  I'll give you an example, dad.   How many can you think of?</p>
+            <hr />
             <section>
                 <div class="container">
-                    <div class="row"></div>
+                    <div class="row">
+                        <div class="col-sm"><em><p>A palindrome is a word or phrase that is spelled the same way frontwards as it is spelled backwards, like taco cat.  You can type into the box, click flip, and we will let you know if that is a palindrome or not. How many can you think of?</p></em></div>
+                        <div class="col-sm">
+                            <img class="border" src="Images/tacokitty.jpg" />
+                        </div>
+                    </div>
                 </div>
-
+                <hr />
                 <div class="container border">
                     <div class="row">
                         <div class="col-sm"><h3>Type your word(s) here.</h3></div>
                         <div class="col-sm"></div>
-                        <div class="col-sm"><span class="output" id="alert"></span></div>
+                        <div class="col-sm"></div>
                     </div>
                     <div class="row">
                         <div class="col-lg"><input class="border" text" id="reverseString" /></div>
-                        <div class="col-lg"><button class="btn" id="flip">Flip</button></div>
-                        <div class="col-lg"><h3><span class="output" id="reverseOutput"></span></h3></div>
-                    </div>
-                </div><br /><br /><br /><br />
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm"></div>
+                        <div class="col-lg"><button class="btn btn-primary" id="flip">Flip</button></div>
+                        <div class="col-lg"><h3><span class="typed" id="reverseOutput" data-typed-items="reverseWord" data-aos="zoom-in" data-aos-delay="100"></span></h3></div>
                     </div>
                 </div>
-
 
             </section>
         </div>
@@ -190,44 +189,44 @@
             </div>
         </div>
     </footer><!-- End Footer -->
-    <!--<a href="#" class="back-to-top">
-        <img src="Images/icons8-to-top-48.png" />
-    </a>
-    <div id="preloader"></div>-->
 
     <script>
 
-                //document.getElementById("reverseString").addEventListener("keypress", function (evt) {
+        document.getElementById("reverseString").addEventListener("keydown", function (evt) {
 
-                //    var character = (evt.which) ? evt.which : evt.keyCode;
-                //    if (characer >= 97 && character <= 122 ||
-                //        character >= 65 && character <= 90) {
-                //        return true;
-                //    } else {
-                //        return false;
-                //    }
+            var character = (evt.which) ? evt.which : evt.keyCode;
+            if ((character >= 97 && character <= 122) ||
+                (character >= 65 && character <= 90) || character == 8 || character == 32 || character == 16) {
+                return true;
+            } else {
+                evt.preventDefault();
+                return false;
+            }
 
-                //});
+        });
 
-            document.getElementById("flip").addEventListener("click", function () {
+        document.getElementById("flip").addEventListener("click", function () {
 
-                let inputWord = document.getElementById("reverseString").value;
-                let lowerInput = inputWord.toLowerCase().replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]|\s/gi, '');
-                let reverseWord = "";
-                for (let loop = inputWord.length - 1; loop >= 0; loop--) {
-                    reverseWord += lowerInput.charAt(loop);
-                }
+            let inputWord = document.getElementById("reverseString").value;
+            let lowerInput = inputWord.toLowerCase().replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]|\s/gi, '');
+            let reverseWord = "";
+            for (let loop = inputWord.length - 1; loop >= 0; loop--) {
+                reverseWord += lowerInput.charAt(loop);
+            }
+            if (inputWord == "") {
+                swal("You must type something")
+                return
+            }
+            if (lowerInput == reverseWord) {
+                swal("That's a plindrome!");
+            }
+            else {
+                swal("That is not a palindrome, Try Again.");
+            }
+            document.getElementById("reverseOutput").innerHTML = reverseWord;
 
-                if (lowerInput == reverseWord) {
-                    alert("That's a plindrome!");
-                }
-                else {
-                    alert("Try Again.");
-                }
-                document.getElementById("reverseOutput").innerHTML = reverseWord;
 
-
-            })
+        })
 
     </script>
 
@@ -243,14 +242,14 @@
     <script src="Scripts/owl.carousel.min.js"></script>
     <script src="Scripts/typed.min.js"></script>
     <script src="Scripts/aos.js"></script>
-
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <!-- Template Main JS File -->
     <script src="/Scripts/main.js"></script>
 
     <script type="text/javascript"
             src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
     </script>
-    
+
 
     <!-- The Modal -->
     <div class="modal fade" id="myModal">
