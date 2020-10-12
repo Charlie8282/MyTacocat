@@ -92,6 +92,7 @@
     <Content Include="Content\venobox.min.css" />
     <Content Include="Images\2020-10-04 %282%29.png" />
     <Content Include="Images\2020-10-04 %283%29.png" />
+    <Content Include="Images\2020-10-11.png" />
     <Content Include="Images\ajax-loader.gif" />
     <Content Include="Images\api.jpg" />
     <Content Include="Images\apple-touch-icon.png" />
@@ -113,6 +114,8 @@
     <Content Include="Images\fizzbuzz.png" />
     <Content Include="Images\fizzbuzz1.png" />
     <Content Include="Images\foliobackground.jpg.png" />
+    <Content Include="Images\Garfield_transparent.png" />
+    <Content Include="Images\gargar.png" />
     <Content Include="Images\HCJ.jpg" />
     <Content Include="Images\icons8-about-24.png" />
     <Content Include="Images\icons8-buildings-24.png" />
@@ -135,6 +138,7 @@
     <Content Include="Images\icons8-projects-24.png" />
     <Content Include="Images\icons8-resume-24.png" />
     <Content Include="Images\icons8-services-24.png" />
+    <Content Include="Images\icons8-share-document-24.png" />
     <Content Include="Images\icons8-skills-24.png" />
     <Content Include="Images\icons8-soda-24.png" />
     <Content Include="Images\icons8-sql-96.png" />
@@ -151,6 +155,7 @@
     <Content Include="Images\sql-skills.png" />
     <Content Include="Images\sumof1.png" />
     <Content Include="Images\sunset1.jpg" />
+    <Content Include="Images\tacobgGar.jpg" />
     <Content Include="Images\tacocat1.jpg" />
     <Content Include="Images\tacokitty.jpg" />
     <Content Include="Images\techbackboard.jfif" />

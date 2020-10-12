@@ -37,39 +37,75 @@
     ======================================================== -->
     <style>
 
-                .headerbg {
-                    background-color: burlywood;
-                }
+        .headerbg {
+            background-image: url(Images/2020-10-11.png);
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
 
-                .output {
-                    background-color: black;
-                    border: solid;
-                    border-radius: 2rem;
-                    color: white;
-                    text-align: center;
-                    line-height: 2rem;
-                }
+        .output {
+            background-color: black;
+            outline: solid;
+            outline-color: whitesmoke;
+            border-radius: .5rem;
+            color: white;
+            text-align: center;
+        }
 
-                .border {
-                    border: medium;
-                    border-radius: 2rem;
-                    border-color: black;
-                }
+        .border {
+            background-color: burlywood;
+            border-radius: .5rem;
+            outline: solid;
+            outline-color: black;
+            outline-style: inherit;
+            font-family: 'Bernard MT', sans-serif;
+            font-size: 4rem;
+            
+            
+        }
 
-                .formula {
-                    text-align: center;
-                    border: solid;
-                    border-color: black;
-                    border-radius: 2rem;
-                }
-                /*
-                .tainermid {
-                    padding-top: 25rem;
-                }
-        */
-                .container {
-                    text-align: center;
-                }
+        .descrip {
+            background-color: burlywood;
+            border-radius: .5rem;
+            outline: solid;
+            outline-color: black;
+            outline-style: inherit;
+            font-family: 'Times New Roman', Times, serif, sans-serif;
+            font-size: 1.5rem;
+            
+        }
+
+        .formula {
+            text-align: center;
+            border: solid;
+            border-color: black;
+            border-radius: 2rem;
+        }
+
+        .formula {
+            background-color: black;
+            color: white;
+        }
+
+        .container {
+            text-align: center;
+           
+        }
+
+        .picture {
+            align-content: flex-start;
+        }
+        .title {
+            font-family: 'Bernard MT';
+            font-size: 5rem;
+        }
+        .direct {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 3rem;
+        }
     </style>
 
 </head>
@@ -80,7 +116,9 @@
     <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button><!--Nav button fix-->
     <!-- ======= Header ======= -->
     <header id="header" class=" justify-content-center">
-        <img src="Images/charlie-nav.png" /><br /><!--Profile picture-->
+        <img src="Images/charlie-nav.png" /><hr />
+        <span class="formula">Charlie Tincher</span><hr />
+        <br /><!--Profile picture-->
 
         <nav class="nav-menu">
             <ul>
@@ -98,97 +136,81 @@
                     <a href="#skills">
                         <img src="Images/icons8-buildings-24.png" /> <span>Sunset Hills</span>
                     </a>
+                </li>-->
+                <li>
+                    <a href="">
+                        <img src="Images/icons8-share-document-24.png" /><span>The Code</span>
+                    </a>
                 </li>
                 <li>
-                    <a href="#resume">
-                        <img src="Images/icons8-ghost-24.png" /> <span>Sum of All Fears</span>
+                    <a href="https://charlieslanding.netlify.app/#challenges">
+                        <img src="Images/icons8-home-24.png" /><span>Back to my Portfolio</span>
                     </a>
-                </li>-->
-            <li>
-                <a href="https://charlieslanding.netlify.app/#challenges">
-                    <img src="Images/icons8-home-24.png" /><span>Back to my Portfolio</span>
-                </a>
-            </li>
+                </li>
             </ul>
+
         </nav>
-        <!-- end .nav-menu -->
-        <!--<div class="social-links">
-            <a href="https://twitter.com/charlie_tincher" target="blank">
-                <img src="Images/icons8-twitter-circled-40.png" />
-            </a>
-            <a href="https://www.linkedin.com/in/charles-tincher-ba40671b8/" target="blank">
-                <img src="Images/icons8-linkedin-48.png" />
-            </a>
-            <a href="https://github.com/Charlie8282" target="blank">
-                <img src="Images/icons8-github-48.png" />
-            </a>
-        </div>-->
+
 
 
 
     </header><!-- End Header -->
     <!-- ======= Hero Section ======= -->
-    <section id="hero">
-        <div class="container">
-            <h1>TacocaT</h1>
-            <p> <span class="typed">A palindrome challenge.</span></p>
-            <hr />
-            <section>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm"><em><p>A palindrome is a word or phrase that is spelled the same way frontwards as it is spelled backwards, like taco cat.  You can type into the box, click flip, and we will let you know if that is a palindrome or not. How many can you think of?</p></em></div>
-                        <div class="col-sm">
-                            <img class="border" src="Images/tacokitty.jpg" />
-                        </div>
-                    </div>
-                </div>
-                <hr />
-                <div class="container border">
-                    <div class="row">
-                        <div class="col-sm"><h3>Type your word(s) here.</h3></div>
-                        <div class="col-sm"></div>
-                        <div class="col-sm"></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg"><input class="border" text" id="reverseString" /></div>
-                        <div class="col-lg"><button class="btn btn-primary" id="flip">Flip</button></div>
-                        <div class="col-lg"><h3><span class="typed" id="reverseOutput" ></span></h3></div>
-                    </div>
-                </div>
+    <!--<div class="container">
+        <h1>TacocaT</h1>
+        <p> <span class="typed">A palindrome challenge.</span></p>-->
+    <br /><br />
+    <div class="container title"><p>Taco Cat Challenge</p></div>
+    <div class="container">
+        <div class="row border">
+            <div class="col-sm"><p class="direct">Directions</p><p class="descrip">A palindrome is a word or phrase that is spelled the same way frontwards as it is spelled backwards, like taco cat.  You can type into the box, click flip, and we will let you know if that is a palindrome or not. How many can you think of?</p></div>
+            <div class="col-sm">
 
-            </section>
-        </div>
-    </section><!-- End Hero -->
-    <!-- End #main -->
-    <!-- ======= Footer ======= -->
-
-    <footer id="footer">
-
-
-        <div>
-            <a href="https://twitter.com/charlie_tincher" target="blank">
-                <img src="Images/icons8-twitter-circled-40.png" />
-            </a>
-            <a href="https://www.linkedin.com/in/charles-tincher-ba40671b8/" target="blank">
-                <img src="Images/icons8-linkedin-48.png" />
-            </a>
-            <a href="https://github.com/Charlie8282" target="blank">
-                <img src="Images/icons8-github-48.png" />
-            </a>
-            <!--</div>-->
-            <div class="copyright">
-                &copy; Copyright <strong><span>MyResume</span></strong>. All Rights Reserved
-            </div>
-            <div class="credits">
-                <!-- All the links in the footer should remain intact. -->
-                <!-- You can delete the links only if you purchased the pro version. -->
-                <!-- Licensing information: [license-url] -->
-                <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/ -->
-                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-                Icons by <a href="https://icons8.com/icon/88601/home">by Icons8</a>
+                <img src="Images/gargar.png" />
             </div>
         </div>
-    </footer><!-- End Footer -->
+    </div>
+    <hr />
+    <div class="container output">
+        <div class="row">
+            <div class="col-sm"><span>Type your word(s) here.</span></div>
+            <div class="col-sm"></div>
+            <div class="col-sm"></div>
+        </div>
+        <div class="row">
+            <div class="col-lg"><input class="text" id="reverseString" /></div>
+            <div class="col-lg"><button class="btn btn-primary" id="flip">Flip</button></div>
+            <div class="col-lg"><h3><span class="typed" id="reverseOutput"></span></h3></div>
+        </div>
+    </div>
+
+
+    <div>
+        <a href= "https://twitter.com/charlie_tincher" target="blank">
+            <img src="Images/icons8-twitter-circled-40.png" />
+        </a>
+        <a href= "https://www.linkedin.com/in/charles-tincher-ba40671b8/" target="blank">
+            <img src="Images/icons8-linkedin-48.png" />
+        </a>
+        <a href= "https://github.com/Charlie8282" target="blank">
+            <img src="Images/icons8-github-48.png" />
+        </a>
+    </div>
+
+
+    <!--<div class="copyright">
+        &copy; Copyright <strong><span>MyResume</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">-->
+    <!-- All the links in the footer should remain intact. -->
+    <!-- You can delete the links only if you purchased the pro version. -->
+    <!-- Licensing information: [license-url] -->
+    <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/ -->
+    <!--Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            Icons by <a href="https://icons8.com/icon/88601/home">by Icons8</a>
+        </div>
+    </div>-->
+
 
     <script>
 
@@ -196,7 +218,7 @@
 
             var character = (evt.which) ? evt.which : evt.keyCode;
             if ((character >= 97 && character <= 122) ||
-                (character >= 65 && character <= 90) || character == 8 || character == 32 || character == 16) {
+                (character >= 65 && character <= 90) || character == 8 || character == 16) {
                 return true;
             } else {
                 evt.preventDefault();
@@ -215,7 +237,7 @@
             }
             if (inputWord == "") {
                 swal("You must type something");
-               
+                return;
             }
             if (lowerInput == reverseWord) {
                 swal("That's a plindrome!");
