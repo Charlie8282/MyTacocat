@@ -92,7 +92,6 @@
     <Content Include="Content\venobox.min.css" />
     <Content Include="Images\2020-10-04 %282%29.png" />
     <Content Include="Images\2020-10-04 %283%29.png" />
-    <Content Include="Images\2020-10-11.png" />
     <Content Include="Images\ajax-loader.gif" />
     <Content Include="Images\api.jpg" />
     <Content Include="Images\apple-touch-icon.png" />
@@ -155,6 +154,7 @@
     <Content Include="Images\sql-skills.png" />
     <Content Include="Images\sumof1.png" />
     <Content Include="Images\sunset1.jpg" />
+    <Content Include="Images\Taco.png" />
     <Content Include="Images\tacobgGar.jpg" />
     <Content Include="Images\tacocat1.jpg" />
     <Content Include="Images\tacokitty.jpg" />
