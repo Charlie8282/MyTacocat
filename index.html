@@ -17,6 +17,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
     <!-- Vendor CSS Files -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link href="Content/bootstrap.min.css" rel="stylesheet">
     <link href="Content/icofont.min.css" rel="stylesheet">
     <link href="Content/boxicons.min.css" rel="stylesheet">
@@ -36,6 +37,65 @@
     * License: https://bootstrapmade.com/license/
     ======================================================== -->
     <style>
+
+        button {
+            position: relative;
+            height: 60px;
+            width: 200px;
+            margin: 0 35px;
+            border-radius: 50px;
+            border: none;
+            outline: none;
+            background: #111;
+            color: #fff;
+            font-size: 20px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background 0.5s;
+        }
+
+            button:first-child:hover {
+                background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+                background-size: 400%;
+            }
+
+            button:last-child:hover {
+                background: linear-gradient(90deg, #fa7199, #f5ce62, #e43603, #fa7199);
+                background-size: 400%;
+            }
+
+            button:first-child:before,
+            button:last-child:before {
+                content: '';
+                position: absolute;
+                background: inherit;
+                top: -5px;
+                right: -5px;
+                bottom: -5px;
+                left: -5px;
+                border-radius: 50px;
+                filter: blur(20px);
+                opacity: 0;
+                transition: opacity 0.5s;
+            }
+
+            button:first-child:hover:before,
+            button:last-child:hover:before {
+                opacity: 1;
+                z-index: -1;
+            }
+
+            button:hover {
+                z-index: 1;
+                animation: glow 8s linear infinite;
+            }
+
+
+
+
+
 
         .headerbg {
             background-image: url('Images/Taco.png');
@@ -63,8 +123,6 @@
             outline-style: inherit;
             font-family: 'Bernard MT', sans-serif;
             font-size: 4rem;
-            
-            
         }
 
         .descrip {
@@ -75,142 +133,169 @@
             outline-style: inherit;
             font-family: 'Times New Roman', Times, serif, sans-serif;
             font-size: 1.5rem;
-            
         }
 
         .formula {
             text-align: center;
-            border: solid;
-            border-color: black;
-            border-radius: 2rem;
-        }
-
-        .formula {
-            background-color: black;
-            color: white;
-        }
-
-        .container {
-            text-align: center;
-           
-        }
-
-        .picture {
-            align-content: flex-start;
-        }
-        .title {
-            font-family: 'Bernard MT';
-            font-size: 5rem;
-        }
-        .direct {
-            font-family: 'Times New Roman', Times, serif;
+            color: grey;
+            font-family: Impact;
             font-size: 3rem;
+            font-style:italic;
+        }
+
+        }
+
+        html, body {
+            display: grid;
+            height: 100%;
+            place-items: center;
+            background: #000;
+            overflow: hidden;
+        }
+        /*new stuff start*/
+      
+
+        @keyframes glow {
+            0% {
+                background-position: 0%;
+            }
+
+            100% {
+                background-position: 400%;
+            }
+        }  
+        /*new stuff end*/
+            .container {
+                text-align: center;
+            }
+
+            .picture {
+                align-content: flex-start;
+            }
+
+            .title {
+                font-family: 'Bernard MT';
+                font-size: 5rem;
+            }
+
+            .direct {
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 3rem;
+            }
+
+            .footpad {
+                padding-bottom: 10rem;
+                padding-top: 5rem;
+            }
+
+        navpad {
         }
     </style>
 
 </head>
 
 <body class="headerbg">
+    <main class="footpad">
+        <!-- ======= Mobile nav toggle button ======= class="mobile-nav-toggle d-xl-none"-->
+        <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button><!--Nav button fix-->
+        <!-- ======= Header ======= -->
+        <header id="header" class=" justify-content-center">
 
-    <!-- ======= Mobile nav toggle button ======= class="mobile-nav-toggle d-xl-none"-->
-    <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button><!--Nav button fix-->
-    <!-- ======= Header ======= -->
-    <header id="header" class=" justify-content-center">
-        <img src="Images/charlie-nav.png" /><hr />
-        <span class="formula">Charlie Tincher</span><hr />
-        <br /><!--Profile picture-->
+            <br /><!--Profile picture-->
 
-        <nav class="nav-menu">
-            <ul>
-                <!--<li class="active">
-                    <a href="#hero">
-                        <img src="Images/icons8-taco-24.png" /><span>TacocaT</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#about">
-                        <img src="Images/icons8-soda-24.png" /><span>FizzBuzz</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#skills">
-                        <img src="Images/icons8-buildings-24.png" /> <span>Sunset Hills</span>
-                    </a>
-                </li>-->
-                <li>
-                    <a href="">
-                        <img src="Images/icons8-share-document-24.png" /><span>The Code</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://charlieslanding.netlify.app/#challenges">
-                        <img src="Images/icons8-home-24.png" /><span>Back to my Portfolio</span>
-                    </a>
-                </li>
-            </ul>
-
-        </nav>
-
-
+            <nav class="nav-menu">
+                <img src="Images/charlie-nav.png" class="navpad" />
+                <span class="formula">Charlie Tincher</span>
+                <ul>
+                    <li>
+                        <a href="https://charlieslanding.netlify.app/#challenges">
+                            <img src="Images/icons8-home-24.png" /><span>Back to my Portfolio</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a data-toggle="modal" data-target="#myModal">
+                            <img src="Images/icons8-share-document-24.png" /><span>The Code</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://charliesfizzbuzz.netlify.app/">
+                            <img src="Images/icons8-soda-24.png" /><span>FizzBuzz</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="Images/icons8-buildings-24.png" /> <span>Sunset Hills</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="Images/icons8-ghost-24.png" /> <span>Sum of All Fears</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
 
 
-    </header><!-- End Header -->
-    <!-- ======= Hero Section ======= -->
-    <!--<div class="container">
+
+
+        </header><!-- End Header -->
+        <!-- ======= Hero Section ======= -->
+        <!--<div class="container">
         <h1>TacocaT</h1>
         <p> <span class="typed">A palindrome challenge.</span></p>-->
-    <br /><br />
-    <div class="container title"><p>Taco Cat Challenge</p></div>
-    <div class="container">
-        <div class="row border">
-            <div class="col-sm"><p class="direct">Directions</p><p class="descrip">A palindrome is a word or phrase that is spelled the same way frontwards as it is spelled backwards, like taco cat.  You can type into the box, click flip, and we will let you know if that is a palindrome or not. How many can you think of?</p></div>
-            <div class="col-sm">
+        <br /><br />
+        <div class="container title"><p>Taco Cat Challenge</p></div>
+        <div class="container ">
+            <div class="row border">
+                <div class="col-sm"><p class="direct">Directions</p><p class="descrip">A palindrome is a word or phrase that is spelled the same way frontwards as it is spelled backwards, like taco cat.  You can type into the box, click flip, and we will let you know if that is a palindrome or not. How many can you think of?</p></div>
+                <div class="col-sm">
 
-                <img src="Images/gargar.png" />
+                    <img src="Images/gargar.png" class="animate__animated animate__backInRight" />
+                </div>
             </div>
         </div>
-    </div>
-    <hr />
-    <div class="container output">
-        <div class="row">
-            <div class="col-sm"><span>Type your word(s) here.</span></div>
-            <div class="col-sm"></div>
-            <div class="col-sm"></div>
+        <hr />
+        <div class="container output">
+            <div class="row">
+                <div class="col-sm"><span>Type your word(s) here.</span></div>
+                <div class="col-sm"></div>
+                <div class="col-sm"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg"><input class="text" id="reverseString" /></div>
+                <div class="col-lg"><button class="btn btn-primary button" id="flip">Flip</button></div>
+                <div class="col-lg"><h3><a class="typed" id="reverseOutput"></a></h3></div>
+            </div>
         </div>
-        <div class="row">
-            <div class="col-lg"><input class="text" id="reverseString" /></div>
-            <div class="col-lg"><button class="btn btn-primary" id="flip">Flip</button></div>
-            <div class="col-lg"><h3><span class="typed" id="reverseOutput"></span></h3></div>
+    </main>
+
+    <footer id="footer">
+        <!--<div class="container">-->
+        <h3>Charlie Tincher</h3>
+        <div>
+            <a href="https://twitter.com/charlie_tincher" target="blank">
+                <img src="Images/icons8-twitter-circled-40.png" />
+            </a>
+            <a href="https://www.linkedin.com/in/charles-tincher-ba40671b8/" target="blank">
+                <img src="Images/icons8-linkedin-48.png" />
+            </a>
+            <a href="https://github.com/Charlie8282" target="blank">
+                <img src="Images/icons8-github-48.png" />
+            </a>
+            <!--</div>-->
+            <div class="copyright">
+                &copy; Copyright <strong><span>MyResume</span></strong>. All Rights Reserved
+            </div>
+            <div class="credits">
+                <!-- All the links in the footer should remain intact. -->
+                <!-- You can delete the links only if you purchased the pro version. -->
+                <!-- Licensing information: [license-url] -->
+                <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/ -->
+                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                Icons by <a href="https://icons8.com/icon/88601/home">by Icons8</a>
+            </div>
         </div>
-    </div>
-
-
-    <!--<div>
-        <a href= "https://twitter.com/charlie_tincher" target="blank">
-            <img src="Images/icons8-twitter-circled-40.png" />
-        </a>
-        <a href= "https://www.linkedin.com/in/charles-tincher-ba40671b8/" target="blank">
-            <img src="Images/icons8-linkedin-48.png" />
-        </a>
-        <a href= "https://github.com/Charlie8282" target="blank">
-            <img src="Images/icons8-github-48.png" />
-        </a>
-    </div>-->
-
-
-    <!--<div class="copyright">
-        &copy; Copyright <strong><span>MyResume</span></strong>. All Rights Reserved
-    </div>
-    <div class="credits">-->
-    <!-- All the links in the footer should remain intact. -->
-    <!-- You can delete the links only if you purchased the pro version. -->
-    <!-- Licensing information: [license-url] -->
-    <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/ -->
-    <!--Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-            Icons by <a href="https://icons8.com/icon/88601/home">by Icons8</a>
-        </div>
-    </div>-->
-
+    </footer>
 
     <script>
 
@@ -275,12 +360,12 @@
 
     <!-- The Modal -->
     <div class="modal fade" id="myModal">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-lg">
             <div class="modal-content">
 
                 <!-- Modal Header -->
                 <div class="modal-header">
-                    <h4 class="modal-title">CV coming soon!</h4>
+                    <h4 class="modal-title">The code will be posted soon.</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
 
@@ -305,6 +390,31 @@
 
 
 </body>
+<!--<footer>
+    <div>
+        <a href="https://twitter.com/charlie_tincher" target="blank">
+            <img src="Images/icons8-twitter-circled-40.png" />
+        </a>
+        <a href="https://www.linkedin.com/in/charles-tincher-ba40671b8/" target="blank">
+            <img src="Images/icons8-linkedin-48.png" />
+        </a>
+        <a href="https://github.com/Charlie8282" target="blank">
+            <img src="Images/icons8-github-48.png" />
+        </a>
+    </div>
+    <div class="copyright">
+        &copy; copyright <strong><span>myresume</span></strong>. all rights reserved
+    </div>
+    <div class="credits">
+        all the links in the footer should remain intact.
+        you can delete the links only if you purchased the pro version.
+        licensing information: [license-url]
+        purchase the pro version with working php/ajax contact form: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
+        designed by <a href="https://bootstrapmade.com/">bootstrapmade</a>
+        icons by <a href="https://icons8.com/icon/88601/home">by icons8</a>
+    </div>
+
+</footer>-->
 
 </html>
 
