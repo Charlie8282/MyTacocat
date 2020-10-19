@@ -19,11 +19,7 @@ body {
 }
 
 
-    a:hover {
-        color: #067ded;
-        text-decoration: none;
-    }
-
+  
 /*h1, h2, h3, h4, h5, h6 {
     font-family: "Raleway", sans-serif;
 }*/
@@ -32,18 +28,10 @@ body {
 # Back to top button
 --------------------------------------------------------------*/
 .back-to-top {
-    position: fixed;
-    /*    display: none;
-    width: 40px;
-    height: 40px;
-*/ border-radius: 50px;
+    position: fixed;border-radius: 50px;
     right: 15px;
     bottom: 15px;
-    /*    background: #0563bb;
-    color: #fff;
-    transition: display 0.5s ease-in-out;
-    z-index: 99999;
-*/
+ 
 }
 
     .back-to-top i {
@@ -87,7 +75,7 @@ body {
         -webkit-animation: animate-preloader 1s linear infinite;
         animation: animate-preloader 1s linear infinite;
     }
-
+/*
 @-webkit-keyframes animate-preloader {
     0% {
         transform: rotate(0deg);
@@ -97,8 +85,8 @@ body {
         transform: rotate(360deg);
     }
 }
-
-@keyframes animate-preloader {
+*/
+/*@keyframes animate-preloader {
     0% {
         transform: rotate(0deg);
     }
@@ -106,21 +94,21 @@ body {
     100% {
         transform: rotate(360deg);
     }
-}
+}*/
 
 /*--------------------------------------------------------------
 # Disable aos animation delay on mobile devices
 --------------------------------------------------------------*/
-@media screen and (max-width: 768px) {
+/*@media screen and (max-width: 768px) {
     [data-aos-delay] {
         transition-delay: 0 !important;
     }
-}
+}*/
 
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
-#header {
+/*#header {
     position: fixed;
     top: 0;
     left: 0;
@@ -129,8 +117,8 @@ body {
     transition: all 0.5s;
     padding: 15px;
     overflow-y: auto;
-}
-
+}*/
+/*
 @media (max-width: 992px) {
     #header {
         width: 300px;
@@ -144,7 +132,7 @@ body {
     #main {
         margin-left: 100px;
     }
-}
+}*/
 
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -185,7 +173,7 @@ body {
         padding: 0 5px 0 7px;
         color: #45505b;
     }
-
+/*
 @media (min-width: 992px) {
     .nav-menu a {
         width: 56px;
@@ -195,8 +183,8 @@ body {
             display: none;
             color: #fff;
         }
-}
-
+}*/
+/*
 .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
     color: #fff;
     background: #0563bb;
@@ -214,7 +202,7 @@ body {
     .nav-menu a:hover span, .nav-menu li:hover > a span {
         display: block;
     }
-
+*/
 /* Mobile Navigation */
 .mobile-nav-toggle {
     position: fixed;
